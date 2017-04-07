@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/* CSS Document */
+header p {
+	list-style-type: none;
+	background-color: #209a9b;
+	color: #FFF;
+	float: left;
+	width: 100%;
+	font-weight: 900;
+	text-align: center;
+}
+
+#parent {
+	width: 100%;
+}
+
+#leftChild {
+	width: 50%;
+}
+
+#audio0 {
+	float: left;
+}
+
+#soundTracks {
+	background-color: #000;
+	float: right;
+}
+
+#rightChild {
+	float: left;
+	width: 50%;
+}
+
+.selected {
+	background-color: yellow;
+}
+
+#btnPrev {
+	font-size: 30px;
+	color: #fff;
+	margin: 20px;
+}
+
+#btnNext {
+	font-size: 30px;
+	color: #fff;
+	margin: 20px;
+}

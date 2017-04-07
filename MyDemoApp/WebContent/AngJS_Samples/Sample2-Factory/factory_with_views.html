@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html data-ng-app="demoApp">
+<head>
+<title>Welcome to Angular JS SPA</title>
+
+<!-- <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>
+
+</head>
+<body>
+	<div>
+		<!--  Placeholder of the Views -->
+		<div data-ng-view=""></div>
+		<div></div>
+
+	</div>
+
+	<script>
+		var myApp = angular.module('demoApp', [ 'ngRoute' ]);
+
+		myApp.controller('SimpleController', function($scope, SimpleFactory) {
+			$scope.customers = [];
+
+			init();
+			function init() {
+				$scope.customers = SimpleFactory.getCustomers();
+			}
+
+			$scope.addCustomer = function() {
+				$scope.customers.push({
+					name : $scope.newCustomer.name,
+					city : $scope.newCustomer.city
+				});
+			}
+		});
+
+		myApp.factory('SimpleFactory', function() {
+			var customers = [ {
+				name : 'suresh',
+				city : 'xyz'
+			}, {
+				name : 'suresh',
+				city : 'rajendra nagar'
+			}, {
+				name : 'sourabh',
+				city : 'ghaziabad'
+			}, {
+				name : 'abhishek',
+				city : 'delhi nagar'
+			} ];
+
+			var factory = {};
+
+			factory.getCustomers = function() {
+				return customers;
+			}
+
+			factory.postCustomer = function(customer) {
+			}
+
+			return factory;
+		});
+
+		myApp.config(function($routeProvider) {
+
+			$routeProvider.when('/', {
+				controller : 'SimpleController',
+				templateUrl : 'views/View1.html'
+			}).when('/view2', {
+				controller : 'SimpleController',
+				templateUrl : 'views/View2.html'
+			}).otherwise({
+				redirectTo : "/"
+			});
+
+		});
+	</script>
+</body>
+</html>

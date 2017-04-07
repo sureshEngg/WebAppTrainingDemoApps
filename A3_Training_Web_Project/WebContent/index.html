@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>A-3</title>
+<script type="text/javascript" src="Scripts/script.js"></script>
+<link href="CSS/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<header>
+		<div id="logo">
+			<img src="images/icon.png" width="180" height="120"
+				alt="Card game asynchronous module"
+				title="Card game asynchronous module">
+		</div>
+		<p>Card game</p>
+	</header>
+	<div id="parent">
+		<div id="topChild">
+			<img id="cardIcon" src="cards/back.png">
+		</div>
+		<div id="bottomChild">
+			<br>
+			<p>Guess the card by selecting one of the following option.</p>
+			<select name="users" id="options" onchange="show(this);">
+				<option value="">Select a Card:</option>
+				<option value="card1">10_of_clubs</option>
+				<option value="card2">10_of_diamonds</option>
+				<option value="card3">10_of_hearts</option>
+				<option value="card4">10_of_spades</option>
+			</select>
+		</div>
+	</div>
+
+</body>
+</html>

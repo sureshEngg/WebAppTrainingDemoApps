@@ -1,0 +1,26 @@
+CACHE MANIFEST
+# v1.0 : 10-08-2014
+ 
+CACHE:
+# pages
+index.html
+ 
+# styles & scripts
+CSS/style.css
+Scripts/jquery.js
+Scripts/jquery-ui.js
+Scripts/script.js
+images/music.png
+
+# music
+music/1.mp3
+music/2.mp3
+music/3.mp3
+music/4.mp3
+music/5.mp3
+music/6.mp3
+ 
+NETWORK:
+ 
+FALLBACK:
+/fallbacks/offline.html

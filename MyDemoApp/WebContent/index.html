@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html ng-app>
+<head>
+<title>Welcome to Angular JS SPA</title>
+</head>
+<body>
+	Name:
+	<br>
+	<input type="text" ng-model="name0"> {{ name0}}
+	<div class="container"
+		ng-init="names=['Suresh', 'Sourabh', 'kamal', 'abhishek']">
+		<h3>Looping with ng-repeat directives</h3>
+		<ul>
+			<li ng-repeat="name0 in names">{{name0}}</li>
+		</ul>
+	</div>
+	
+	<input type="text" ng-model="name"> 
+	<div class="container" ng-init="customers=[{name:'suresh', city:'xyz'},{name:'suresh', city:'rajendra nagar'},{name:'sourabh', city:'ghaziabad'},{name:'abhishek', city: 'delhi nagar'}]">
+	<ul>
+	<li data-ng-repeat="cust in customers | filter:name | orderBy:'city'">  {{ cust.name | uppercase}} - {{cust.city | lowercase}} </li>
+	</ul>
+	</div>
+	<script src="Scripts/angular.min.js"></script>
+</body>
+</html>

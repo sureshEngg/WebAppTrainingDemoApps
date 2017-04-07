@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* CSS Document */
+header p {
+	list-style-type: none;
+	background-color: #209a9b;
+	color: #FFF;
+	float: left;
+	width: 100%;
+	font-weight: 900;
+	text-align: center;
+}
+
+#parent {
+	width: 100%;
+	text-align: center;
+}
+
+#cardIcon{
+	background-color: #f1f1f1;
+}
+
+#topChild {
+	width: 100%;
+	margin: auto;
+}
+
+#bottomChild {
+	width: 100%;
+	margin: auto;
+}

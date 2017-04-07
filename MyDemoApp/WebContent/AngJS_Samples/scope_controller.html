@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html data-ng-app="myApp">
+<head>
+<title>Welcome to Angular JS SPA</title>
+</head>
+<body>
+	<input type="text" ng-model="name">
+	<div data-ng-controller="SimpleController">
+		<ul>
+			<li data-ng-repeat="cust in customers | filter:name | orderBy:'city'">
+				{{ cust.name | uppercase}} - {{cust.city | lowercase}}</li>
+		</ul>
+	</div>
+	<script src="Scripts/angular.min.js"></script>
+
+	<script type="text/javascript">
+		var myApp = angular.module('myApp', []);
+		var controllers = {};
+		controllers.SimpleController = function($scope) {
+			$scope.customers = [ {
+				name : 'suresh',
+				city : 'xyz'
+			}, {
+				name : 'suresh',
+				city : 'rajendra nagar'
+			}, {
+				name : 'sourabh',
+				city : 'ghaziabad'
+			}, {
+				name : 'abhishek',
+				city : 'delhi nagar'
+			} ];
+		};
+
+		controllers.SimpleController2 = function($scope) {
+			$scope.customers = [ {
+				name : 'sonu',
+				city : 'kashipur'
+			}, {
+				name : 'abhi',
+				city : 'sahibabad'
+			}, {
+				name : 'soro',
+				city : 'kanpur'
+			} ];
+		};
+		myApp.controller(controllers);
+	</script>
+</body>
+</html>
